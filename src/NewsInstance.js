@@ -14,13 +14,31 @@ class Modal extends React.Component {
     }
 
     render() {
+        const newsObj = this.props.news[this.props.instanceId];
         if (this.props.display) {
-            return (
-                <div className='Modal-container'>
-                    Hello World
-                    {console.log(this.props.display)}
-                </div>
-            )
+            if (this.props.instanceId != '') {
+                return (
+                    <div className='Modal-container'>
+                        <div className='Modal-instance'>
+                            <img className='Modal-instance-image' src={newsObj.image != null ? newsObj.image : NoImage} alt="News Ilustration image" />
+                            <h1>{newsObj.title}</h1>
+                            <div className="Modal-instance-info">
+                                <span>{newsObj.publishedAt}</span>
+                                <span>{newsObj.author}</span>
+                            </div>
+                            <p>{newsObj.content}</p>
+                        </div>
+                        <span className='Modal-button-area'>
+                            <button onClick={this.props.closeModal} className='btn Modal-close-button'>X</button>
+                            <a href={newsObj.url} target='_blank'>
+                                <button className='btn Modal-to-website'>Go To Website</button>
+                            </a>
+                        </span>
+                    </div>
+                )
+            } else {
+                return <div></div>
+            }
         } else {
             return <div></div>
         }

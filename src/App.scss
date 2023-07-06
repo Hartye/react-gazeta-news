@@ -2,7 +2,11 @@ $header-background-color: #f75656;
 $header-font-color: #fafafa;
 $main-background-color: #b876f7;
 $instance-background-color: #9437eb;
-$instance-border-color: rgb(210, 55, 241);
+$instance-border-color: #d237f1;
+
+* {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
 
 body {
   background-color: $main-background-color;
@@ -16,6 +20,8 @@ body {
   height: 8vh;
   max-height: 50px;
   min-height: 30px;
+
+  margin-bottom: 1rem;
 }
 
 // Grid display config
@@ -80,4 +86,14 @@ body {
 
 .App-content-instances img {
   width: 100%;
+
+  user-select: none;
+}
+
+.App-content-instances h1 {
+  user-select: none;
+}
+
+.App-content-instances p {
+  user-select: none;
 }
