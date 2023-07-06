@@ -1,0 +1,11 @@
+@use '../App.scss';
+@import '../App.scss';
+
+.Modal-instance-container {
+    width: 90%;
+    max-width: 800px;
+    padding: 1rem;
+
+    background-color: $instance-background-color;
+    border: 2px solid $instance-border-color;
+}

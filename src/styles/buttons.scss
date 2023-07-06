@@ -1,0 +1,19 @@
+.btn {
+    margin: .5rem 0;
+    padding: .5rem;
+
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+
+    font-size: medium;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.App-to-top-button {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1rem;
+}
