@@ -1,7 +1,8 @@
-$instance-background-color: #d4a6ff;
-$instance-border-color: #f9ff9f;
-$instance-close-button: #fa6c6c;
-$instance-website-button: #5da6fa;
+$instance-background-color: #252229;
+$instance-border-color: #D9DCDF;
+$instance-close-button: #BE321D;
+$instance-website-button: #5B7483;
+$instance-font-color: #D9DCDF;
 
 * {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -54,6 +55,12 @@ $instance-website-button: #5da6fa;
     height: 200px;
     object-fit: cover;
     border: 1px solid $instance-border-color;
+
+    align-self: center;
+}
+
+.Modal-instance h1, .Modal-instance p, .Modal-instance span {
+    color: $instance-font-color;
 }
 
 .Modal-button-area button, .Modal-button-area a {
@@ -66,4 +73,19 @@ $instance-website-button: #5da6fa;
 
 .Modal-to-website {
     background-color: $instance-website-button;
+}
+
+// Screen Adaptation
+@media screen and (max-height: 750px) {
+    @media screen and (max-width: 1000px) {
+        .Modal-instance-image {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 550px) {
+        .Modal-instance-image {
+            display: none;
+        }
+    }
 }

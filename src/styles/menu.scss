@@ -1,0 +1,105 @@
+$menu-github-background-color: #292B33;
+$menu-linkedin-background-color: #3D6C9F;
+$menu-mail-background-color: #E89421;
+$menu-repository-background-color: #B64154;
+$menu-font-color: #D9DCDF;
+
+// Animation
+@keyframes menuAppear {
+    0% {
+        transform: scale(0);
+        visibility: visible;
+    } 80% {
+        opacity: 1;
+        transform: scale(1.1);
+    } 100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes menuDisappear {
+    0% {
+        visibility: visible;
+        transform: scale(1);
+    } 40% {
+        transform: scale(1.1);
+    } 80% {
+        transform: scale(.8);
+        opacity: 1;
+    } 99% {
+        opacity: 0;
+    } 100% {
+        visibility: hidden;
+    }
+}
+
+// Style
+.Menu-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    margin-top: 4rem;
+    margin-right: 2rem;
+}
+
+.Menu-container.off {
+    animation-name: menuDisappear;
+    animation-duration: .5s;
+
+    transform: scale(0);
+    visibility: hidden;
+}
+
+.Menu-container.on {
+    animation-name: menuAppear;
+    animation-duration: .5s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.Menu-container nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: .2rem;
+}
+
+.Menu-container nav ul a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.Menu-container nav ul li {
+    width: 100%;
+    list-style-type: none;
+    padding: .5rem;
+
+    text-align: center;
+    color: $menu-font-color;
+
+    user-select: none;
+}
+
+.Menu-container nav ul li:hover {
+    cursor: pointer;
+
+    opacity: .7;
+}
+
+.Menu-container nav ul li.Menu-item-github {
+    background-color: $menu-github-background-color;
+}
+
+.Menu-container nav ul li.Menu-item-linkedin {
+    background-color: $menu-linkedin-background-color;
+}
+
+.Menu-container nav ul li.Menu-item-mail {
+    background-color: $menu-mail-background-color;
+}
+
+.Menu-container nav ul li.Menu-item-repository {
+    background-color: $menu-repository-background-color;
+}
